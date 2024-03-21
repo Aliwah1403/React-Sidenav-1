@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+  /* position: fixed; */
+}
+
+main:before {
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+main:after {
+  content: "";
+  background-image: url("./assets/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.gradient {
+
+    z-index: 3;
+    height: fit-content;
+    width: 100%;
+    max-width: 640px;
+    background-image: radial-gradient(at 79% 53%, #dd3333 0px, transparent 0%), radial-gradient(at 27% 37%, #d0021b 0px, transparent 50%), radial-gradient(at 52% 99%, #ff4433 0px, transparent 50%), radial-gradient(at 10% 29%, #1d2024 0px, transparent 50%), radial-gradient(at 97% 96%, #000000 0px, transparent 50%);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    filter: blur(100px) saturate(150%);
+    top: 80px;
+    opacity: 0.15;
+}
+
+@layer base {
+  body {
+    background: #f1f1f1;
+  }
+  h1 {
+    @apply text-xl font-medium capitalize;
+  }
+}
+
+.link {
+  @apply p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer cursor-default duration-300 font-medium;
+}
+
+.active {
+  @apply bg-blue-100 text-blue-600;
+}
