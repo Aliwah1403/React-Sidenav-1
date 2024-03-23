@@ -6,6 +6,7 @@ import Authentication from "./pages/Authentication";
 import Build from "./pages/Build";
 import Settings from "./pages/Settings";
 import Storage from "./pages/Storage";
+import Trips from "./pages/Trips";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<AllApps />} />
         <Route path="/authentication" element={<Authentication />} />
         <Route path="/storage" element={<Storage />} />
+        <Route path="/trips" element={<Trips />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/income/:bID" element={<Build />} />
         <Route path="/expense/:aID" element={<Analytics />} />

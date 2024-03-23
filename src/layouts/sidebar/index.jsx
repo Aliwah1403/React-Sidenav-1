@@ -85,7 +85,7 @@ const Sidebar = () => {
     {
       name: "expense",
       icon: BarChart3,
-      menus: ["dashboard", "realtime", "events"],
+      menus: ["all", "fuel", "others"],
     },
   ];
 
@@ -121,11 +121,17 @@ const Sidebar = () => {
             <li>
               <NavLink to="/authentication" className={"link"}>
                 <CircleUserRound size={23} className="min-w-max" />
-                Transport
+                Expenditure
               </NavLink>
             </li>
             <li>
               <NavLink to="/storage" className={"link"}>
+                <Database size={23} className="min-w-max" />
+                PnL Board
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/trips" className={"link"}>
                 <Database size={23} className="min-w-max" />
                 Trips
               </NavLink>
@@ -178,8 +184,8 @@ const Sidebar = () => {
                   rotate: 0,
                 }
               : {
-                  x: -10,
-                  y: -200,
+                  x: 0,
+                  y: 0,
                   rotate: 180,
                 }
           }
@@ -187,9 +193,9 @@ const Sidebar = () => {
             duration: 0,
           }}
           onClick={() => setIsOpen(!isOpen)}
-          className="absolute w-fit h-fit z-50 right-2 bottom-5 cursor-pointer md:block hidden"
+          className="absolute w-fit h-fit z-50 right-0 bottom-5 border border-slate-300 rounded p-1 cursor-pointer md:block hidden"
         >
-          <ArrowLeftFromLine size={27} />
+          <ArrowLeftFromLine size={20} />
         </motion.div>
       </motion.div>
       <div className="m-3 md:hidden" onClick={() => setIsOpen(true)}>
