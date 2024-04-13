@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Urbanist", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -41,19 +41,22 @@ main:after {
 }
 
 .gradient {
-
-    z-index: 3;
-    height: fit-content;
-    width: 100%;
-    max-width: 640px;
-    background-image: radial-gradient(at 79% 53%, #dd3333 0px, transparent 0%), radial-gradient(at 27% 37%, #d0021b 0px, transparent 50%), radial-gradient(at 52% 99%, #ff4433 0px, transparent 50%), radial-gradient(at 10% 29%, #1d2024 0px, transparent 50%), radial-gradient(at 97% 96%, #000000 0px, transparent 50%);
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    filter: blur(100px) saturate(150%);
-    top: 80px;
-    opacity: 0.15;
+  z-index: 3;
+  height: fit-content;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(at 79% 53%, #dd3333 0px, transparent 0%),
+    radial-gradient(at 27% 37%, #d0021b 0px, transparent 50%),
+    radial-gradient(at 52% 99%, #ff4433 0px, transparent 50%),
+    radial-gradient(at 10% 29%, #1d2024 0px, transparent 50%),
+    radial-gradient(at 97% 96%, #000000 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
 }
 
 @layer base {
@@ -70,5 +73,5 @@ main:after {
 }
 
 .active {
-  @apply bg-blue-100 text-blue-600;
+  @apply bg-green-100 text-green-600;
 }

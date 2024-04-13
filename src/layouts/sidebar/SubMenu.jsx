@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
@@ -10,14 +10,15 @@ const SubMenu = ({ data }) => {
     <>
       <li
         onClick={() => setSubMenuOpen(!subMenuOpen)}
-        className={`link ${pathname.includes(data.name) && "text-blue-600"}`}
+        className={`link ${pathname.includes(data.name) && "text-green-600"}`}
       >
         <data.icon size={23} className="min-w-max" />
         <p className="capitalize flex-1">{data.name}</p>
-        <ArrowDown
+        <ChevronDown
           size={15}
           className={`${subMenuOpen && "rotate-180"} duration-200`}
         />
+       
       </li>
       <motion.ul
         animate={

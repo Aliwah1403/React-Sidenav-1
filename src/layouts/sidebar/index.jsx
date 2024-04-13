@@ -9,6 +9,9 @@ import {
   LayoutGrid,
   Database,
   Wrench,
+  Truck,
+  Banknote,
+  LineChart
 } from "lucide-react";
 
 import { useMediaQuery } from "react-responsive";
@@ -120,20 +123,20 @@ const Sidebar = () => {
             </li>
             <li>
               <NavLink to="/authentication" className={"link"}>
-                <CircleUserRound size={23} className="min-w-max" />
+                <Banknote size={23} className="min-w-max"/>
                 Expenditure
               </NavLink>
             </li>
             <li>
               <NavLink to="/storage" className={"link"}>
-                <Database size={23} className="min-w-max" />
-                PnL Board
+                <Truck size={23} className="min-w-max"/>
+                Vehicles
               </NavLink>
             </li>
             <li>
               <NavLink to="/trips" className={"link"}>
-                <Database size={23} className="min-w-max" />
-                Trips
+                <LineChart size={23} className="min-w-max"/>
+                PnL Board
               </NavLink>
             </li>
 
@@ -141,7 +144,7 @@ const Sidebar = () => {
             {(isOpen || isTablet) && (
               <div className="border-y py-5 border-slate-300">
                 <small className="pl-3 text-slate-500 inline-block mb-2">
-                  Product categories
+                  Finances
                 </small>
                 {subMenuList?.map((menu) => (
                   <div key={menu.name} className="flex flex-col gap-1">
