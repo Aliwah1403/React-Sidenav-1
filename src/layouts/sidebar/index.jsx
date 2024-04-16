@@ -11,7 +11,7 @@ import {
   Wrench,
   Truck,
   Banknote,
-  LineChart
+  LineChart,
 } from "lucide-react";
 
 import { useMediaQuery } from "react-responsive";
@@ -81,12 +81,12 @@ const Sidebar = () => {
 
   const subMenuList = [
     {
-      name: "income",
+      name: "incomes",
       icon: Wrench,
-      menus: ["auth", "app settings", "storage", "hosting"],
+      menus: ["rates", "detention"],
     },
     {
-      name: "expense",
+      name: "expenses",
       icon: BarChart3,
       menus: ["all", "fuel", "others"],
     },
@@ -122,25 +122,25 @@ const Sidebar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/authentication" className={"link"}>
-                <Banknote size={23} className="min-w-max"/>
+              <NavLink to="/expenditure" className={"link"}>
+                <Banknote size={23} className="min-w-max" />
                 Expenditure
               </NavLink>
             </li>
             <li>
-              <NavLink to="/storage" className={"link"}>
-                <Truck size={23} className="min-w-max"/>
+              <NavLink to="/vehicles" className={"link"}>
+                <Truck size={23} className="min-w-max" />
                 Vehicles
               </NavLink>
             </li>
             <li>
-              <NavLink to="/trips" className={"link"}>
-                <LineChart size={23} className="min-w-max"/>
+              <NavLink to="/statement" className={"link"}>
+                <LineChart size={23} className="min-w-max" />
                 PnL Board
               </NavLink>
             </li>
 
-            {/* Links with submen */}
+            {/* Links with submenu */}
             {(isOpen || isTablet) && (
               <div className="border-y py-5 border-slate-300">
                 <small className="pl-3 text-slate-500 inline-block mb-2">
@@ -162,7 +162,7 @@ const Sidebar = () => {
             </li>
           </ul>
 
-          {isOpen && (
+          {/* {isOpen && (
             <div className="flex-1  text-sm z-50 max-h-48 my-auto whitespace-pre w-full font-medium">
               <div className="flex items-center justify-between border-y border-slate-300 p-4">
                 <div>
@@ -174,7 +174,7 @@ const Sidebar = () => {
                 </p>
               </div>
             </div>
-          )}
+          )} */}
         </div>
 
         {/* Expand Button */}
@@ -187,7 +187,7 @@ const Sidebar = () => {
                   rotate: 0,
                 }
               : {
-                  x: 0,
+                  x: -20,
                   y: 0,
                   rotate: 180,
                 }

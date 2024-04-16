@@ -1,24 +1,24 @@
 import { Route, Routes } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import AllApps from "./pages/AllApps";
-import Analytics from "./pages/Analytics";
-import Authentication from "./pages/Authentication";
-import Build from "./pages/Build";
+import Expenditure from "./pages/Expenditure";
 import Settings from "./pages/Settings";
-import Storage from "./pages/Storage";
-import Trips from "./pages/Trips";
+import Statement from "./pages/Statement";
+import Vehicles from "./pages/Vehicles";
+import Incomes from "./pages/Incomes";
+import Expenses from "./pages/Expenses";
 
 function App() {
   return (
     <RootLayout>
       <Routes>
         <Route path="/" element={<AllApps />} />
-        <Route path="/authentication" element={<Authentication />} />
-        <Route path="/storage" element={<Storage />} />
-        <Route path="/trips" element={<Trips />} />
+        <Route path="/expenditure" element={<Expenditure />} />
+        <Route path="/vehicles" element={<Vehicles />} />
+        <Route path="/statement" element={<Statement />} />
         <Route path="/settings" element={<Settings />} />
-        <Route path="/income/:bID" element={<Build />} />
-        <Route path="/expense/:aID" element={<Analytics />} />
+        <Route path="/incomes/:bID" element={<Incomes />} />
+        <Route path="/expenses/:aID" element={<Expenses />} />
       </Routes>
     </RootLayout>
   );
