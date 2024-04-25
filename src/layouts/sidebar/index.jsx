@@ -12,12 +12,15 @@ import {
   Truck,
   Banknote,
   LineChart,
+  CreditCard,
+  Wallet,
 } from "lucide-react";
 
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from "react";
 import Icon from "../../assets/logo.svg";
 import { NavLink, useLocation } from "react-router-dom";
+import greenLogo from '../../assets/logoGreen.png'
 
 import SubMenu from "./SubMenu";
 
@@ -82,12 +85,12 @@ const Sidebar = () => {
   const subMenuList = [
     {
       name: "incomes",
-      icon: Wrench,
+      icon: Wallet,
       menus: ["rates", "detention"],
     },
     {
       name: "expenses",
-      icon: BarChart3,
+      icon: CreditCard,
       menus: ["all", "fuel", "others"],
     },
   ];
@@ -104,11 +107,11 @@ const Sidebar = () => {
         variants={Sidebar_animation}
         initial={{ x: isTablet ? -250 : 0 }}
         animate={isOpen ? "open" : "closed"}
-        className="bg-white text-gray shadow-xl z-[999] w-[16rem] max-w-[16rem] h-screen overflow-hidden md:relative fixed"
+        className="bg-primaryGreen text-white shadow-xl z-[999] w-[16rem] max-w-[16rem] h-screen overflow-hidden md:relative fixed"
       >
         {/* Logo */}
         <div className="flex items-center gap-2.5 font-medium border-b border-slate-300 py-3 mx-3">
-          <img src={Icon} alt="icon" width={45} />
+          <img src={greenLogo} alt="icon" width={45} />
           <span className="text-xl whitespace-pre">Owlee</span>
         </div>
 
